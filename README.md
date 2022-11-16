@@ -85,3 +85,12 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
     ***placeholder***
 
+# Technology, Frameworks and Programs used.
+
+## Languages
+
+    ***placeholder***
+
+## Programs and Frameworks
+
+    ***placeholder***
