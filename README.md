@@ -28,3 +28,8 @@ This is Portfolio Project 3 called Hangman
 - [Testing user stories](#)
 - [Deployment](#deployment)
 - [Credits](#credits)
+
+# Motivation
+
+Portfolio Project 3 is about Hangman game. I have picked it to challenge myself and see how far I can go.
+Main Purpose of this website is to play the game in CLI(Command Line Interface)
