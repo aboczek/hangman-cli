@@ -118,3 +118,14 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 # Deployment
 
     ***Placeholder***
+
+# Credits 
+- Slack Community and my Mentor!
+- Tutor Support.
+- [Simen Daehlin](https://github.com/Eventyret) My Mentor very Helpfull!.
+- [The W3C Markup Validation Service](https://validator.w3.org/) Validation of HTML.
+- [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
+- [JS Hint](https://jshint.com/) Debugging code. **************
+- [AmIresponsive](https://ui.dev/amiresponsive) for responsive look of my website.
+- [Autoprefixer](https://autoprefixer.github.io/) used to prefix CSS. **************
+- [Colorhexa](https://www.colorhexa.com/) was used to take colors from for readme.************
