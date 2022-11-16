@@ -47,11 +47,25 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 - Projects goal is to play Hangman game, check if provided input is correct or not and save the score.
 
-## Requirements
+## Requirements and Expectations
 
 - Easy to understand game what to do as a player.
 - Run the game through browser.
 - Expect website to save score.
 - Expect game to provide random word.
 - Expect game to check if provided input is correct.
+
+## Design
+
+- Colors
+
+    ***placeholder***
+
+- Fonts
+
+    ***placeholder***
+
+- Images
+
+    ***placeholder***
 
