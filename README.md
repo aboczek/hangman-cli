@@ -33,3 +33,12 @@ This is Portfolio Project 3 called Hangman
 
 Portfolio Project 3 is about Hangman game. I have picked it to challenge myself and see how far I can go.
 Main Purpose of this website is to play the game in CLI(Command Line Interface)
+
+# User Experience(UX)
+
+## User Stories
+- I want user to be able to run and play the game in their browser.
+- I want user to be able to input data into the game.
+- I want user to see if they got the word correctly or not.
+- I want user to be able to save the score.
+- ***placeholder for more data***
