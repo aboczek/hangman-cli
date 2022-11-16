@@ -69,3 +69,19 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
     ***placeholder***
 
+[Back to top](#hangman)
+
+## Wireframes
+
+- Mobile
+
+    ***placeholder***
+
+- Tablet
+
+    ***placeholder***
+
+- Desktop
+
+    ***placeholder***
+
