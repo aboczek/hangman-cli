@@ -94,3 +94,27 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 ## Programs and Frameworks
 
     ***placeholder***
+
+# Features
+
+    1. ***Placeholder***
+
+# Navigation
+
+    - ***Placeholder***
+
+# Testing
+
+***loads of placeholders***
+
+## Testing User Stories
+
+- ***Placeholder***
+
+# Bugs
+
+    ***Placeholder***
+
+# Deployment
+
+    ***Placeholder***
