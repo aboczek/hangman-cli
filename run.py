@@ -3,7 +3,6 @@ from art import tprint
 import gspread
 
 word = ["test"]
-user_nickname = []
 GUESS_MISTAKES = 7
 
 tprint("Welcome")
@@ -20,3 +19,15 @@ def nickname():
 
 
 nickname()
+
+
+def start_game():
+    """
+    Starts the game when user types in "start"
+    """
+    start_input = input("To start game type in 'start': ")
+    if start_input == "start":
+        print("game started")
+
+
+start_game()
