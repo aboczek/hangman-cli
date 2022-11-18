@@ -2,9 +2,6 @@ import random
 from art import tprint
 import gspread
 
-words = "test"
-guess = []
-GUESS_MISTAKES = 7
 
 tprint("Welcome")
 tprint("To")
@@ -26,15 +23,47 @@ def guess_word():
     """
     Draws random word from list and makes it guessable
     """
-    for word in words:
-        print("_", end=" ")
-    guess_input = input("\nYour guessed letter: ")
-    for letter in words:
-        if guess_input == letter:
-            print(letter, end=" ")
-        else:
-            print("_", end=" ")
+    word = "Laura"
+    guesses = []
+    guess_mistakes = 7
+    finished = False
 
+    while not finished:
+        for letter in word:
+            if letter.lower() in guesses:
+                print(letter, end=" ")
+            else:
+                print("_", end=" ")
+        print("")
+
+        guess_input = input("Guess the letter: ")
+        guesses.append(guess_input.lower())
+
+        if guess_input.lower() not in word.lower():
+            guess_mistakes -= 1
+            if guess_mistakes == 0:
+                break
+
+    finished = True
+    for letter in word:
+        if letter.lower() not in guesses:
+            finished = False
+
+    if finished:
+        print("Congratulations you guessed the word")
+        guess_word()
+    else:
+        print("You lost all of ur lifes")
+
+
+    # guess_input = input("Your guessed letter: ")
+    # print("")
+    # guess.append(guess_input.lower())
+    # for letter in words:
+    #     if guess_input == letter:
+    #         print(letter, end=" ")
+    #     else:
+    #         print("_", end=" ")
 
 def start_game():
     """
@@ -55,5 +84,3 @@ def print_guess_word():
     """
     prints guessed letter in word if it is correct
     """
-    
-
