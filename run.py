@@ -23,7 +23,8 @@ def guess_word():
     """
     Draws random word from list and makes it guessable
     """
-    word = "Laura"
+    dicto = ["house", "leave", "letter"]
+    word = random.choice(dicto)
     guesses = []
     guess_mistakes = 7
     finished = False
@@ -51,19 +52,10 @@ def guess_word():
 
     if finished:
         print("Congratulations you guessed the word")
-        guess_word()
+
     else:
         print("You lost all of ur lifes")
 
-
-    # guess_input = input("Your guessed letter: ")
-    # print("")
-    # guess.append(guess_input.lower())
-    # for letter in words:
-    #     if guess_input == letter:
-    #         print(letter, end=" ")
-    #     else:
-    #         print("_", end=" ")
 
 def start_game():
     """
