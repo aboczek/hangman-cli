@@ -3,6 +3,13 @@ from art import tprint
 import gspread
 
 
+dicto = ["house", "leave", "letter", "Python", "Java"]
+word = random.choice(dicto)
+guesses = []
+GUESS_MISTAKE = 7
+FINISHED = False
+
+
 tprint("Welcome")
 tprint("To")
 tprint("Hangman")
@@ -23,13 +30,8 @@ def guess_word():
     """
     Draws random word from list and makes it guessable
     """
-    dicto = ["house", "leave", "letter"]
-    word = random.choice(dicto)
-    guesses = []
-    guess_mistakes = 7
-    finished = False
-
-    while not finished:
+    global word, guesses, GUESS_MISTAKE, FINISHED
+    while not FINISHED:
         for letter in word:
             if letter.lower() in guesses:
                 print(letter, end=" ")
@@ -40,17 +42,20 @@ def guess_word():
         guess_input = input("Guess the letter: ")
         guesses.append(guess_input.lower())
 
+        if guess_input == "":
+            print("\n Warning! your input cannot be empty")
+
         if guess_input.lower() not in word.lower():
-            guess_mistakes -= 1
-            if guess_mistakes == 0:
+            GUESS_MISTAKE -= 1
+            if GUESS_MISTAKE == 0:
                 break
 
-    finished = True
-    for letter in word:
-        if letter.lower() not in guesses:
-            finished = False
+        FINISHED = True
+        for letter in word:
+            if letter.lower() not in guesses:
+                FINISHED = False
 
-    if finished:
+    if FINISHED:
         print("Congratulations you guessed the word")
 
     else:
