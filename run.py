@@ -20,9 +20,11 @@ SHEET = GSPREAD_CLIENT.open("hangman")
 
 dicto = ["house", "leave", "letter", "Python", "Java"]
 word = random.choice(dicto)
-guesses = []
+GUESSES = []
 GUESS_MISTAKE = 7
 FINISHED = False
+highscore = SHEET.worksheet("hangman_sheet")
+SCORE = 0
 
 
 tprint("                Welcome")
@@ -42,9 +44,6 @@ def nickname():
     print("")
 
 
-nickname()
-
-
 def rules():
     """
     Displays rules after setting your nickname up.
@@ -59,7 +58,7 @@ def rules():
     print("2.You guess 1 letter at a time if its correct it will be displayed")
     print("")
     time.sleep(1)
-    print("3.If not you lose one life out of 7")
+    print("3.If not you lose one life out of seven")
     print("")
     time.sleep(1)
     print("Enjoy the Hangman game.")
@@ -77,21 +76,24 @@ def rules():
     time.sleep(1)
 
 
+# def show_highscore():
+
+
 def guess_word():
     """
     Draws random word from list and makes it guessable
     """
-    global word, guesses, GUESS_MISTAKE, FINISHED
+    global word, GUESSES, GUESS_MISTAKE, FINISHED, SCORE
     while not FINISHED:
         for letter in word:
-            if letter.lower() in guesses:
+            if letter.lower() in GUESSES:
                 print(letter, end=" ")
             else:
                 print("_", end=" ")
         print("")
 
         guess_input = input("Guess the letter: ")
-        guesses.append(guess_input.lower())
+        GUESSES.append(guess_input.lower())
 
         if guess_input == "":
             print("\n Warning! your input cannot be empty")
@@ -103,21 +105,36 @@ def guess_word():
 
         FINISHED = True
         for letter in word:
-            if letter.lower() not in guesses:
+            if letter.lower() not in GUESSES:
                 FINISHED = False
 
     if FINISHED:
+        SCORE += 1
         print("Congratulations you guessed the word")
         print("")
-        time.sleep(1)
-        tprint("Next word:")
-        time.sleep(1)
-        FINISHED = False
-        guesses.clear()
-        time.sleep(1)
-        guess_word()
+        print(f"your score is {SCORE}")
+        print("")
+        finished_input = input("Do you want to 'continue' or 'finish'?\n")
+        print("")
+        if finished_input == "continue":
+            tprint("Next word:")
+            time.sleep(1)
+            FINISHED = False
+            GUESSES.clear()
+            time.sleep(1)
+            guess_word()
+        elif finished_input == "finish":
+            print("")
+            print("saving..")
     else:
         print("You lost all of ur lifes")
+
+
+def ret_to_menu():
+    """
+    Returns from highscore to main menu
+    """
+    start_game()
 
 
 def start_game():
@@ -125,12 +142,26 @@ def start_game():
     Starts the game when user types in "start"
     """
     time.sleep(1)
-    start_input = input("To start game type in 'start': ")
+    print("To start game type in 'start'")
+    print("")
+    print("To view highscore type in 'highscore'")
+    print("")
+    start_input = input("'start' or 'highscore': ")
     print("")
     if start_input == "start":
         time.sleep(1)
+        nickname()
         rules()
         guess_word()
+    elif start_input == "highscore":
+        time.sleep(1)
+        print("score placeholder")
+        print("")
+        time.sleep(1)
+        return_input = input("to return type in 'return': ")
+        if return_input == "return":
+            ret_to_menu()
+        # show_highscore()
     else:
         print("wrong input please try again")
         start_game()
