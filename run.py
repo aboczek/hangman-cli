@@ -20,10 +20,31 @@ def nickname():
     Takes users nickname and displays it
     """
     user_input = input("Put your nickname here: ")
+    print("")
     print(f"Your nickname is {user_input}.")
+    print("")
 
 
 nickname()
+
+
+def rules():
+    """
+    Displays rules after setting your nickname up.
+    """
+    tprint("Rules")
+    print("")
+    print("1.Random word is printed out and you have to guess it")
+    print("")
+    print("2.You guess 1 letter at a time if its correct it will be displayed")
+    print("")
+    print("3.If not you lose one life out of 7")
+    print("")
+    print("Enjoy the Hangman game.")
+    print("")
+
+
+rules()
 
 
 def guess_word():
@@ -57,7 +78,6 @@ def guess_word():
 
     if FINISHED:
         print("Congratulations you guessed the word")
-
     else:
         print("You lost all of ur lifes")
 
