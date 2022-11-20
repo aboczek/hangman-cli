@@ -1,10 +1,11 @@
 import random
 from art import tprint
 import gspread
+import time
 
 
 dicto = ["house", "leave", "letter", "Python", "Java"]
-word = random.choice(dicto)
+word = random.choice(dicto).strip()
 guesses = []
 GUESS_MISTAKE = 7
 FINISHED = False
@@ -21,6 +22,7 @@ def nickname():
     """
     user_input = input("Put your nickname here: ")
     print("")
+    time.sleep(1)
     print(f"Your nickname is {user_input}.")
     print("")
 
@@ -78,6 +80,9 @@ def guess_word():
 
     if FINISHED:
         print("Congratulations you guessed the word")
+        FINISHED = False
+        guesses.clear()
+        guess_word()
     else:
         print("You lost all of ur lifes")
 
@@ -95,9 +100,3 @@ def start_game():
 
 
 start_game()
-
-
-def print_guess_word():
-    """
-    prints guessed letter in word if it is correct
-    """
