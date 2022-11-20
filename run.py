@@ -3,7 +3,7 @@ import time
 from art import tprint
 import gspread
 from google.oauth2.service_account import Credentials
-
+from ascii_art.ascii_art import print_hangman
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -100,6 +100,7 @@ def guess_word():
 
         if guess_input.lower() not in word.lower():
             GUESS_MISTAKE -= 1
+            print_hangman(GUESS_MISTAKE)
             if GUESS_MISTAKE == 0:
                 break
 
