@@ -5,7 +5,7 @@ import time
 
 
 dicto = ["house", "leave", "letter", "Python", "Java"]
-word = random.choice(dicto).strip()
+word = random.choice(dicto)
 guesses = []
 GUESS_MISTAKE = 7
 FINISHED = False
@@ -34,16 +34,22 @@ def rules():
     """
     Displays rules after setting your nickname up.
     """
+    time.sleep(1)
     tprint("Rules")
     print("")
+    time.sleep(1)
     print("1.Random word is printed out and you have to guess it")
     print("")
+    time.sleep(1)
     print("2.You guess 1 letter at a time if its correct it will be displayed")
     print("")
+    time.sleep(1)
     print("3.If not you lose one life out of 7")
     print("")
+    time.sleep(1)
     print("Enjoy the Hangman game.")
     print("")
+    time.sleep(1)
 
 
 rules()
@@ -82,6 +88,7 @@ def guess_word():
         print("Congratulations you guessed the word")
         FINISHED = False
         guesses.clear()
+        time.sleep(1)
         guess_word()
     else:
         print("You lost all of ur lifes")
@@ -92,7 +99,9 @@ def start_game():
     Starts the game when user types in "start"
     """
     start_input = input("To start game type in 'start': ")
+    print("")
     if start_input == "start":
+        time.sleep(1)
         guess_word()
     else:
         print("wrong input please try again")
