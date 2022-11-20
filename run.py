@@ -25,15 +25,16 @@ GUESS_MISTAKE = 7
 FINISHED = False
 
 
-tprint("Welcome")
-tprint("To")
-tprint("Hangman")
+tprint("                Welcome")
+tprint("                To")
+tprint("                Hangman")
 
 
 def nickname():
     """
     Takes users nickname and displays it
     """
+    time.sleep(1)
     user_input = input("Put your nickname here: ")
     print("")
     time.sleep(1)
@@ -49,7 +50,7 @@ def rules():
     Displays rules after setting your nickname up.
     """
     time.sleep(1)
-    tprint("Rules")
+    tprint("                Rules")
     print("")
     time.sleep(1)
     print("1.Random word is printed out and you have to guess it")
@@ -63,10 +64,17 @@ def rules():
     time.sleep(1)
     print("Enjoy the Hangman game.")
     print("")
+    time.sleep(3)
+    tprint("                5")
     time.sleep(1)
-
-
-rules()
+    tprint("                4")
+    time.sleep(1)
+    tprint("                3")
+    time.sleep(1)
+    tprint("                2")
+    time.sleep(1)
+    tprint("                1")
+    time.sleep(1)
 
 
 def guess_word():
@@ -100,6 +108,10 @@ def guess_word():
 
     if FINISHED:
         print("Congratulations you guessed the word")
+        print("")
+        time.sleep(1)
+        tprint("Next word:")
+        time.sleep(1)
         FINISHED = False
         guesses.clear()
         time.sleep(1)
@@ -112,10 +124,12 @@ def start_game():
     """
     Starts the game when user types in "start"
     """
+    time.sleep(1)
     start_input = input("To start game type in 'start': ")
     print("")
     if start_input == "start":
         time.sleep(1)
+        rules()
         guess_word()
     else:
         print("wrong input please try again")
