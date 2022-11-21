@@ -1,7 +1,8 @@
 import time
 from art import tprint
 from .ascii_art import print_hangman
-from .data import word, highscore, GUESSES, GUESS_MISTAKE, FINISHED, SCORE
+from .data import word, highscore, GUESSES, GUESS_MISTAKE, \
+    FINISHED, SCORE, SHEET
 
 
 def nickname():
@@ -12,6 +13,7 @@ def nickname():
     time.sleep(1)
     user_input = input("Put your nickname here: ")
     nick = user_input
+    # highscore.update_cell(9, 2, nick)
     print("")
     time.sleep(1)
     print(f"Your nickname is {user_input}.")
@@ -101,7 +103,8 @@ def guess_word():
         elif finished_input == "finish":
             print("")
             print("saving..")
-            # highscore.update_cell(10, 3, nick)
+            # highscore.update_cell(9, 3, SCORE)
+            return SCORE
     else:
         print("You lost all of ur lifes")
 
