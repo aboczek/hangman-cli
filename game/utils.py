@@ -10,6 +10,13 @@ tprint("                To")
 tprint("                Hangman")
 
 
+def print_new_line():
+    """
+    Prints new line
+    """
+    print("")
+
+
 def nickname():
     """
     Takes users nickname and displays it
@@ -19,10 +26,10 @@ def nickname():
     user_input = input("Put your nickname here: ")
     # nick = user_input
     # highscore.update_cell(9, 2, nick)
-    print("")
+    print_new_line()
     time.sleep(1)
     print(f"Your nickname is {user_input}.")
-    print("")
+    print_new_line()
 
 
 def rules():
@@ -31,19 +38,19 @@ def rules():
     """
     time.sleep(1)
     tprint("                Rules")
-    print("")
+    print_new_line()
     time.sleep(1)
     print("1.Random word is printed out and you have to guess it")
-    print("")
+    print_new_line()
     time.sleep(1)
     print("2.You guess 1 letter at a time if its correct it will be displayed")
-    print("")
+    print_new_line()
     time.sleep(1)
     print("3.If not you lose one life out of seven")
-    print("")
+    print_new_line()
     time.sleep(1)
     print("Enjoy the Hangman game.")
-    print("")
+    print_new_line()
     time.sleep(3)
     tprint("                5")
     time.sleep(1)
@@ -71,7 +78,7 @@ def guess_word():
                 print(letter, end=" ")
             else:
                 print("_", end=" ")
-        print("")
+        print_new_line()
 
         guess_input = input("Guess the letter: ")
         GUESSES.append(guess_input.lower())
@@ -93,11 +100,11 @@ def guess_word():
     if FINISHED:
         SCORE += 1
         print("Congratulations you guessed the word")
-        print("")
+        print_new_line()
         print(f"your score is {SCORE}")
-        print("")
+        print_new_line()
         finished_input = input("Do you want to 'continue' or 'finish'?\n")
-        print("")
+        print_new_line()
         if finished_input == "continue":
             tprint("Next word:")
             time.sleep(1)
@@ -106,7 +113,7 @@ def guess_word():
             time.sleep(1)
             guess_word()
         elif finished_input == "finish":
-            print("")
+            print_new_line()
             print("saving..")
             # highscore.update_cell(9, 3, SCORE)
             return SCORE
