@@ -2,7 +2,7 @@ import time
 from art import tprint
 from .ascii_art import (print_hangman)
 from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
-                       FINISHED, SCORE, SHEET)
+                       FINISHED, SCORE, SHEET, RULES_LIST)
 
 
 tprint("                Welcome")
@@ -44,18 +44,13 @@ def rules():
     Displays rules after setting your nickname up.
     """
     time.sleep(1)
-    tprint("                Rules")
+    center_text("Rules")
     print_new_line()
     time.sleep(1)
-    print("1.Random word is printed out and you have to guess it")
-    print_new_line()
-    time.sleep(1)
-    print("2.You guess 1 letter at a time if its correct it will be displayed")
-    print_new_line()
-    time.sleep(1)
-    print("3.If not you lose one life out of seven")
-    print_new_line()
-    time.sleep(1)
+    for idx, x in enumerate(RULES_LIST, start=1):
+        print(idx, x)
+        print_new_line()
+        time.sleep(1)
     print("Enjoy the Hangman game.")
     print_new_line()
     for number in reversed(range(1, 6)):

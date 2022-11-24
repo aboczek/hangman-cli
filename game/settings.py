@@ -22,3 +22,6 @@ GUESSES = []
 GUESS_MISTAKE = 7
 FINISHED = False
 SCORE = 0
+RULES_LIST = ["Random word is printed out and you have to guess it",
+              "You guess 1 letter at a time if its correct it will be displayed",
+              "If not you lose one life out of seven"]
