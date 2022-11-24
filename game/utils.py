@@ -54,6 +54,7 @@ def rules():
     print("Enjoy the Hangman game.")
     print_new_line()
     for number in reversed(range(1, 6)):
+        time.sleep(1)
         center_text(number)
         time.sleep(1)
 
@@ -100,7 +101,7 @@ def guess_word():
         finished_input = input("Do you want to 'continue' or 'finish'?\n")
         print_new_line()
         if finished_input == "continue":
-            tprint("Next word:")
+            center_text("Next Word: ")
             time.sleep(1)
             FINISHED = False
             GUESSES.clear()
