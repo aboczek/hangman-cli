@@ -1,5 +1,4 @@
 import random
-from art import tprint
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -23,8 +22,3 @@ GUESSES = []
 GUESS_MISTAKE = 7
 FINISHED = False
 SCORE = 0
-
-
-tprint("                Welcome")
-tprint("                To")
-tprint("                Hangman")

@@ -1,8 +1,13 @@
 import time
 from art import tprint
 from .ascii_art import print_hangman
-from .data import word, highscore, GUESSES, GUESS_MISTAKE, \
-    FINISHED, SCORE, SHEET
+from .data import (word, highscore, GUESSES, GUESS_MISTAKE,
+                FINISHED, SCORE, SHEET)
+
+
+tprint("                Welcome")
+tprint("                To")
+tprint("                Hangman")
 
 
 def nickname():

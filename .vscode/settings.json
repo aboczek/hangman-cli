@@ -21,6 +21,6 @@
       "**/CVS": true
    },
    "files.autoSave": "off",
-   "workbench.colorTheme": "Visual Studio Dark",
+   "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
    "editor.defaultFormatter": "HookyQR.beautify"
 }
