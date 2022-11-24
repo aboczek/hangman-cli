@@ -32,6 +32,13 @@ def nickname():
     print_new_line()
 
 
+def center_text(text_to_be_printed):
+    """
+    Prints tprint into countdown in rules function
+    """
+    tprint(f"                {text_to_be_printed}")
+
+
 def rules():
     """
     Displays rules after setting your nickname up.
@@ -51,17 +58,9 @@ def rules():
     time.sleep(1)
     print("Enjoy the Hangman game.")
     print_new_line()
-    time.sleep(3)
-    tprint("                5")
-    time.sleep(1)
-    tprint("                4")
-    time.sleep(1)
-    tprint("                3")
-    time.sleep(1)
-    tprint("                2")
-    time.sleep(1)
-    tprint("                1")
-    time.sleep(1)
+    for number in reversed(range(1, 6)):
+        center_text(number)
+        time.sleep(1)
 
 
 # def show_highscore():
