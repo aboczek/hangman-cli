@@ -1,8 +1,8 @@
 import time
 from art import tprint
-from .ascii_art import print_hangman
-from .data import (word, highscore, GUESSES, GUESS_MISTAKE,
-                FINISHED, SCORE, SHEET)
+from .ascii_art import (print_hangman)
+from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
+                       FINISHED, SCORE, SHEET)
 
 
 tprint("                Welcome")
@@ -14,10 +14,10 @@ def nickname():
     """
     Takes users nickname and displays it
     """
-    global highscore
+    # global highscore
     time.sleep(1)
     user_input = input("Put your nickname here: ")
-    nick = user_input
+    # nick = user_input
     # highscore.update_cell(9, 2, nick)
     print("")
     time.sleep(1)
@@ -112,40 +112,3 @@ def guess_word():
             return SCORE
     else:
         print("You lost all of ur lifes")
-
-
-def ret_to_menu():
-    """
-    Returns from highscore to main menu
-    """
-    start_game()
-
-
-def start_game():
-    """
-    Starts the game when user types in "start"
-    """
-    time.sleep(1)
-    print("To start game type in 'start'")
-    print("")
-    print("To view highscore type in 'highscore'")
-    print("")
-    start_input = input("'start' or 'highscore': ")
-    print("")
-    if start_input == "start":
-        time.sleep(1)
-        nickname()
-        rules()
-        guess_word()
-    elif start_input == "highscore":
-        time.sleep(1)
-        print("score placeholder")
-        print("")
-        time.sleep(1)
-        return_input = input("to return type in 'return': ")
-        if return_input == "return":
-            ret_to_menu()
-        # show_highscore()
-    else:
-        print("wrong input please try again")
-        start_game()

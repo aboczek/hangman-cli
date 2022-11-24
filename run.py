@@ -1,4 +1,4 @@
-from game.functions import start_game
+from game.game import start_game
 
 
 start_game()
