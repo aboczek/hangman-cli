@@ -2,8 +2,9 @@ import time
 from art import tprint
 from .ascii_art import (print_hangman)
 from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
-                       FINISHED, SCORE, SHEET, RULES_LIST,
-                       stringing)
+                       FINISHED, SCORE, RULES_LIST,
+                       stringing, SCORE_LIST, first_place,
+                       second_place, third_place)
 
 
 def center_text(text_to_be_printed):
@@ -25,19 +26,26 @@ def print_new_line():
     print("")
 
 
-def nickname():
+def save_score():
+    """
+    Saving score to google sheets
+    """
+    highscore.append_row(SCORE_LIST)
+
+
+def get_nickname():
     """
     Takes users nickname and displays it
     """
-    # global highscore
     time.sleep(1)
     user_input = input("Put your nickname here: ")
-    # nick = user_input
-    # highscore.update_cell(9, 2, nick)
+    nickname = user_input
     print_new_line()
     time.sleep(1)
     print(f"Your nickname is {user_input}.")
     print_new_line()
+    SCORE_LIST.append(nickname)
+    return SCORE_LIST
 
 
 def rules():
@@ -59,14 +67,24 @@ def rules():
         time.sleep(1)
 
 
-# def show_highscore():
+def show_highscore():
+    """
+    Shows score for highscore in start_game
+    """
+    print_new_line()
+    print(f"First place: {first_place[1]} and has {first_place[2]} points")
+    print_new_line()
+    print(f"Second places: {second_place[1]} and has {second_place[2]} points")
+    print_new_line()
+    print(f"Third place: {third_place[1]} and has {third_place[2]} points")
+    print_new_line()
 
 
 def guess_word():
     """
     Draws random word from list and makes it guessable
     """
-    global word, GUESSES, GUESS_MISTAKE, FINISHED, SCORE, nick
+    global word, GUESSES, GUESS_MISTAKE, FINISHED, SCORE, nickname
     while not FINISHED:
         for letter in word:
             if letter.lower() in GUESSES:
@@ -103,7 +121,6 @@ def guess_word():
         if finished_input == "continue":
             center_text("Next Word: ")
             time.sleep(1)
-            new_guess_word()
             FINISHED = False
             GUESSES.clear()
             time.sleep(1)
@@ -112,7 +129,11 @@ def guess_word():
         elif finished_input == "finish":
             print_new_line()
             print("saving..")
-            # highscore.update_cell(9, 3, SCORE)
-            return SCORE
+            SCORE_LIST.append(SCORE)
+            save_score()
+            return SCORE_LIST
+        else:
+            print("Wrong input aborting!")
+
     else:
         print("You lost all of ur lifes")

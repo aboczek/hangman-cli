@@ -24,12 +24,14 @@ def stringing():
     for string in words:
         lower_string = string.lower()
         return lower_string
-    print(lower_string)
 
 
 highscore = SHEET.worksheet("hangman_sheet")
 word = stringing()
-test = words_to_play()
+first_place = highscore.row_values(2)
+second_place = highscore.row_values(3)
+third_place = highscore.row_values(4)
+SCORE_LIST = []
 GUESSES = []
 GUESS_MISTAKE = 7
 FINISHED = False

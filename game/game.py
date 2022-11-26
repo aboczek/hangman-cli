@@ -1,5 +1,6 @@
 import time
-from .utils import (nickname, rules, guess_word, print_new_line)
+from .utils import (get_nickname, rules, guess_word, print_new_line,
+                    show_highscore)
 
 
 def ret_to_menu():
@@ -22,18 +23,19 @@ def start_game():
     print_new_line()
     if start_input == "start":
         time.sleep(1)
-        nickname()
+        get_nickname()
         rules()
         guess_word()
     elif start_input == "highscore":
         time.sleep(1)
-        print("score placeholder")
+        show_highscore()
         print_new_line()
         time.sleep(1)
         return_input = input("to return type in 'return': ")
         if return_input == "return":
             ret_to_menu()
-        # show_highscore()
+        else:
+            print("Wrong input aborting!")
     else:
-        print("wrong input please try again")
+        print("wrong input please try again!")
         start_game()
