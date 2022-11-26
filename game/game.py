@@ -1,5 +1,6 @@
 import time
 from .utils import (nickname, rules, guess_word)
+from .settings import (stringing)
 
 
 def ret_to_menu():

@@ -5,7 +5,8 @@ def words_to_play():
     """
     Pulls random words from API and uses them for hangman game
     """
-    req = requests.get("https://random-word-api.herokuapp.com/word?number=10")
+    req = requests.get("https://random-word-api.herokuapp.com/word?number=10",
+                       timeout=10)
     _playable_words = req.text
     # print(f"Content: {req.content}")
     # print(f"Text: {req.text}")

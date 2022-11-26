@@ -2,7 +2,8 @@ import time
 from art import tprint
 from .ascii_art import (print_hangman)
 from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
-                       FINISHED, SCORE, SHEET, RULES_LIST, stringing)
+                       FINISHED, SCORE, SHEET, RULES_LIST,
+                       stringing)
 
 
 tprint("                Welcome")
@@ -105,6 +106,7 @@ def guess_word():
             FINISHED = False
             GUESSES.clear()
             time.sleep(1)
+            word = stringing()
             guess_word()
         elif finished_input == "finish":
             print_new_line()
