@@ -2,7 +2,7 @@ import time
 from art import tprint
 from .ascii_art import (print_hangman)
 from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
-                       FINISHED, SCORE, SHEET, RULES_LIST)
+                       FINISHED, SCORE, SHEET, RULES_LIST, stringing)
 
 
 tprint("                Welcome")
@@ -47,14 +47,13 @@ def rules():
     center_text("Rules")
     print_new_line()
     time.sleep(1)
-    for idx, x in enumerate(RULES_LIST, start=1):
-        print(idx, x)
+    for index, rule in enumerate(RULES_LIST, start=1):
+        print(index, rule)
         print_new_line()
         time.sleep(1)
     print("Enjoy the Hangman game.")
     print_new_line()
     for number in reversed(range(1, 6)):
-        time.sleep(1)
         center_text(number)
         time.sleep(1)
 
