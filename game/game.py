@@ -1,6 +1,5 @@
 import time
-from .utils import (nickname, rules, guess_word)
-from .settings import (stringing)
+from .utils import (nickname, rules, guess_word, print_new_line)
 
 
 def ret_to_menu():
@@ -16,11 +15,11 @@ def start_game():
     """
     time.sleep(1)
     print("To start game type in 'start'")
-    print("")
+    print_new_line()
     print("To view highscore type in 'highscore'")
-    print("")
+    print_new_line()
     start_input = input("'start' or 'highscore': ")
-    print("")
+    print_new_line()
     if start_input == "start":
         time.sleep(1)
         nickname()
@@ -29,7 +28,7 @@ def start_game():
     elif start_input == "highscore":
         time.sleep(1)
         print("score placeholder")
-        print("")
+        print_new_line()
         time.sleep(1)
         return_input = input("to return type in 'return': ")
         if return_input == "return":

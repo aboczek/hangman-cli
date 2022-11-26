@@ -8,9 +8,6 @@ def words_to_play():
     req = requests.get("https://random-word-api.herokuapp.com/word?number=10",
                        timeout=10)
     _playable_words = req.text
-    # print(f"Content: {req.content}")
-    # print(f"Text: {req.text}")
-    # testing = _playable_words.split()
 
     return _playable_words
 

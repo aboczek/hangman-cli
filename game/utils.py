@@ -6,9 +6,16 @@ from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
                        stringing)
 
 
-tprint("                Welcome")
-tprint("                To")
-tprint("                Hangman")
+def center_text(text_to_be_printed):
+    """
+    Prints tprint into countdown in rules function
+    """
+    tprint(f"                {text_to_be_printed}")
+
+
+center_text("Welcome")
+center_text("To")
+center_text("Hangman")
 
 
 def print_new_line():
@@ -31,13 +38,6 @@ def nickname():
     time.sleep(1)
     print(f"Your nickname is {user_input}.")
     print_new_line()
-
-
-def center_text(text_to_be_printed):
-    """
-    Prints tprint into countdown in rules function
-    """
-    tprint(f"                {text_to_be_printed}")
 
 
 def rules():
@@ -103,6 +103,7 @@ def guess_word():
         if finished_input == "continue":
             center_text("Next Word: ")
             time.sleep(1)
+            new_guess_word()
             FINISHED = False
             GUESSES.clear()
             time.sleep(1)

@@ -1,4 +1,3 @@
-import random
 import gspread
 from google.oauth2.service_account import Credentials
 from .helpers.api import (words_to_play, word_formatter)
@@ -26,7 +25,6 @@ def stringing():
         lower_string = string.lower()
         return lower_string
     print(lower_string)
-
 
 
 highscore = SHEET.worksheet("hangman_sheet")
