@@ -117,8 +117,9 @@ def guess_word():
         print(f"your score is {SCORE}")
         print_new_line()
         finished_input = input("Do you want to 'continue' or 'finish'?\n")
+        finish = finished_input.lower()
         print_new_line()
-        if finished_input == "continue":
+        if finish == "continue":
             center_text("Next Word: ")
             time.sleep(1)
             FINISHED = False
@@ -126,7 +127,7 @@ def guess_word():
             time.sleep(1)
             word = stringing()
             guess_word()
-        elif finished_input == "finish":
+        elif finish == "finish":
             print_new_line()
             time.sleep(1)
             print("saving..")

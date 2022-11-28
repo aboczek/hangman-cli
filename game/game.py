@@ -20,19 +20,21 @@ def start_game():
     print("To view highscore type in 'highscore'")
     print_new_line()
     start_input = input("'start' or 'highscore': \n")
+    start = start_input.lower()
     print_new_line()
-    if start_input == "start":
+    if start == "start":
         time.sleep(1)
         get_nickname()
         rules()
         guess_word()
-    elif start_input == "highscore":
+    elif start == "highscore":
         time.sleep(1)
         show_highscore()
         print_new_line()
         time.sleep(1)
         return_input = input("to return type in 'return': \n")
-        if return_input == "return":
+        go_back = return_input.lower()
+        if go_back == "return":
             ret_to_menu()
         else:
             print("Wrong input aborting!")
