@@ -19,7 +19,7 @@ def start_game():
     print_new_line()
     print("To view highscore type in 'highscore'")
     print_new_line()
-    start_input = input("'start' or 'highscore': ")
+    start_input = input("'start' or 'highscore': \n")
     print_new_line()
     if start_input == "start":
         time.sleep(1)
@@ -31,7 +31,7 @@ def start_game():
         show_highscore()
         print_new_line()
         time.sleep(1)
-        return_input = input("to return type in 'return': ")
+        return_input = input("to return type in 'return': \n")
         if return_input == "return":
             ret_to_menu()
         else:

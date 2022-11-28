@@ -38,7 +38,7 @@ def get_nickname():
     Takes users nickname and displays it
     """
     time.sleep(1)
-    user_input = input("Put your nickname here: ")
+    user_input = input("Put your nickname here: \n")
     nickname = user_input
     print_new_line()
     time.sleep(1)
@@ -93,7 +93,7 @@ def guess_word():
                 print("_", end=" ")
         print_new_line()
 
-        guess_input = input("Guess the letter: ")
+        guess_input = input("Guess the letter: \n")
         GUESSES.append(guess_input.lower())
 
         if guess_input == "":
