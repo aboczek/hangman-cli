@@ -40,6 +40,9 @@ def get_nickname():
     time.sleep(1)
     user_input = input("Put your nickname here: \n")
     nickname = user_input
+    if user_input == "":
+        print("Cant use empty nickname!")
+        get_nickname()
     print_new_line()
     time.sleep(1)
     print(f"Your nickname is {user_input}.")

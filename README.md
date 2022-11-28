@@ -89,15 +89,33 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 ## Languages
 
-    ***placeholder***
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ## Programs and Frameworks
 
-    ***placeholder***
+- [Lucid Charts](https://www.lucidchart.com/)
+    - Used for logic charts
 
 # Features
 
-    1. ***Placeholder***
+- Main menu where you Type "start" to start the game or "highscore" to display top 3 scores(filled in with placeholders)
+<details><summary>Picture</summary>
+<img src="documentation/start-highscore.png" alt="main menu"/>
+</details>
+<br>
+
+- Highscore, if you type in "return" it will return to the main menu above^
+<details><summary>Picture</summary>
+<img src="documentation/highscore.png" alt="highscore"/>
+</details>
+<br>
+
+- Asks for nickname, if nickname empty throws an error!
+<details><summary>Picture</summary>
+<img src="documentation/nickname.png" alt="nickname"/>
+<img src="documentation/nickname-error.png" alt="throw an error!">
+</details>
+<br>
 
 # Navigation
 
