@@ -128,9 +128,11 @@ def guess_word():
             guess_word()
         elif finished_input == "finish":
             print_new_line()
+            time.sleep(1)
             print("saving..")
             SCORE_LIST.append(SCORE)
             save_score()
+            print("Thank you for playing!")
             return SCORE_LIST
         else:
             print("Wrong input aborting!")
