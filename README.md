@@ -98,39 +98,71 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 # Features
 
-- Main menu where you Type "start" to start the game or "highscore" to display top 3 scores(filled in with placeholders)
+### Main menu where you Type "start" to start the game or "highscore" to display top 3 scores(filled in with placeholders)
 <details><summary>Picture</summary>
 <img src="documentation/start-highscore.png" alt="main menu"/>
 </details>
 <br>
 
-- Highscore, if you type in "return" it will return to the main menu above^
+### Highscore, if you type in "return" it will return to the main menu above^
 <details><summary>Picture</summary>
 <img src="documentation/highscore.png" alt="highscore"/>
 </details>
 <br>
 
-- Asks for nickname, if nickname empty throws an error!
+### Asks for nickname, if nickname empty throws an error!
 <details><summary>Picture</summary>
 <img src="documentation/nickname.png" alt="nickname"/>
 <img src="documentation/nickname-error.png" alt="throw an error!">
 </details>
 <br>
 
-- Rules, displays Rules in Ascii and prints out rules
+### Rules, displays Rules in Ascii and prints out rules
 <details><summary>Picture</summary>
 <img src="documentation/nickname.png" alt="rules ascii"/>
 <img src="documentation/nickname-error.png" alt="rules">
 </details>
 <br>
 
-- Word being displayed!
+### Word being displayed!
 <details><summary>Picture</summary>
-<img src="documentation/nickname.png" alt="word displayed"/>
-<img src="documentation/nickname-error.png" alt="error">
+<img src="documentation/guess-word.png" alt="word displayed"/>
+<img src="documentation/guess-word-correct-letter.png" alt="correct letter">
+<img src="documentation/guess-word-wrong-letter.png" alt="error">
 </details>
 <br>
 
+### Guessed the word!
+<details><summary>Picture</summary>
+<img src="documentation/correct-word.png" alt="correct word"/>
+</details>
+<br>
+
+### Continue/New word printed
+<details><summary>Picture</summary>
+<img src="documentation/new-word-printed.png" alt="new word printed"/>
+</details>
+<br>
+
+### Game over you are out of lives!
+<details><summary>Picture</summary>
+<img src="documentation/game-over.png" alt="game over"/>
+</details>
+<br>
+
+### Finish/Saving score and finishing
+<details><summary>Picture</summary>
+<img src="documentation/game-finish.png" alt="finishing game"/>
+</details>
+<br>
+
+### Finished game saves to Google Sheets and sorts it descending/from highest to lowest
+<details><summary>Picture</summary>
+<img src="documentation/adam-heroku.png" alt="picked nickname to save in google sheets"/>
+<img src="documentation/google-sheet.png" alt="google sheets">
+<img src="documentation/google-sheet-js.png" alt="JavaScript in app scripts for google sheets">
+</details>
+<br>
 
 # Navigation
 

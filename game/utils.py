@@ -10,7 +10,10 @@ from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
 
 
 def clear():
-    os.system('cls' if os.name=='nt' else 'clear')
+    """
+    Cleans the terminal when called
+    """
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def center_text(text_to_be_printed):
