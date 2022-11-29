@@ -124,6 +124,13 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 </details>
 <br>
 
+- Word being displayed!
+<details><summary>Picture</summary>
+<img src="documentation/nickname.png" alt="word displayed"/>
+<img src="documentation/nickname-error.png" alt="error">
+</details>
+<br>
+
 
 # Navigation
 

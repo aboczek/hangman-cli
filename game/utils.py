@@ -73,7 +73,7 @@ def rules():
     for number in reversed(range(1, 6)):
         center_text(number)
         time.sleep(1)
-    clear()
+    print_new_line()
 
 
 def show_highscore():
@@ -95,6 +95,7 @@ def guess_word():
     """
     global word, GUESSES, GUESS_MISTAKE, FINISHED, SCORE, nickname
     while not FINISHED:
+        print_new_line()
         for letter in word:
             if letter.lower() in GUESSES:
                 print(letter, end=" ")
@@ -129,7 +130,8 @@ def guess_word():
         finish = finished_input.lower()
         print_new_line()
         if finish == "continue":
-            center_text("Next Word: ")
+            clear()
+            center_text("New word:")
             time.sleep(1)
             FINISHED = False
             GUESSES.clear()
