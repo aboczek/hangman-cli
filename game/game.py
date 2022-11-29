@@ -15,6 +15,7 @@ def start_game():
     Starts the game when user types in "start"
     """
     time.sleep(1)
+    print_new_line()
     print("To start game type in 'start'")
     print_new_line()
     print("To view highscore type in 'highscore'")
@@ -32,12 +33,13 @@ def start_game():
         show_highscore()
         print_new_line()
         time.sleep(1)
-        return_input = input("to return type in 'return': \n")
+        return_input = input("Press Enter to return to main menu!\n")
         go_back = return_input.lower()
         if go_back == "return":
             ret_to_menu()
         else:
-            print("Wrong input aborting!")
+            ret_to_menu()
+
     else:
         print("wrong input please try again!")
         start_game()

@@ -8,13 +8,14 @@ from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
                        second_place, third_place)
 
 
+
 def clear():
     os.system('cls' if os.name=='nt' else 'clear')
 
 
 def center_text(text_to_be_printed):
     """
-    Prints tprint into countdown in rules function
+    Prints tprint as ASCI ART
     """
     tprint(f"                {text_to_be_printed}")
 
@@ -69,6 +70,7 @@ def rules():
         print_new_line()
         time.sleep(1)
     print("Enjoy the Hangman game.")
+    time.sleep(3)
     print_new_line()
     for number in reversed(range(1, 6)):
         center_text(number)
@@ -147,7 +149,9 @@ def guess_word():
             print("Thank you for playing!")
             return SCORE_LIST
         else:
-            print("Wrong input aborting!")
-
+            print("Ohh I see you put wrong input..")
+            print("Abandoning the ship run the game agian")
     else:
         print("You lost all of ur lifes")
+        print_new_line()
+        center_text("Game Over")
