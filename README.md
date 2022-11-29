@@ -94,7 +94,7 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 ## Programs and Frameworks
 
 - [Lucid Charts](https://www.lucidchart.com/)
-    - Used for logic charts
+    -  Used for logic charts
 
 # Features
 
@@ -116,6 +116,14 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 <img src="documentation/nickname-error.png" alt="throw an error!">
 </details>
 <br>
+
+- Rules, displays Rules in Ascii and prints out rules
+<details><summary>Picture</summary>
+<img src="documentation/nickname.png" alt="rules ascii"/>
+<img src="documentation/nickname-error.png" alt="rules">
+</details>
+<br>
+
 
 # Navigation
 

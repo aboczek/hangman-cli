@@ -1,10 +1,15 @@
 import time
+import os
 from art import tprint
 from .ascii_art import (print_hangman)
 from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
                        FINISHED, SCORE, RULES_LIST,
                        stringing, SCORE_LIST, first_place,
                        second_place, third_place)
+
+
+def clear():
+    os.system('cls' if os.name=='nt' else 'clear')
 
 
 def center_text(text_to_be_printed):
@@ -68,6 +73,7 @@ def rules():
     for number in reversed(range(1, 6)):
         center_text(number)
         time.sleep(1)
+    clear()
 
 
 def show_highscore():
