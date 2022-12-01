@@ -164,10 +164,6 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 </details>
 <br>
 
-# Navigation
-
-    - ***Placeholder***
-
 # Testing
 
 ***loads of placeholders***

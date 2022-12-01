@@ -1,4 +1,5 @@
 import gspread
+import random
 from google.oauth2.service_account import Credentials
 from .helpers.api import (words_to_play, word_formatter)
 
@@ -15,19 +16,25 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("hangman")
 
 
-def stringing():
-    """
-    Function pulls list of words from word_formatter and,
-    loops through allowing lower letters
-    """
-    words = word_formatter(words_to_play())
-    for string in words:
-        lower_string = string.lower()
-        return lower_string
+# def stringing():
+#     """
+#     Function pulls list of words from word_formatter and,
+#     loops through allowing lower letters
+#     """
+#     words = word_formatter(words_to_play())
+#     for string in words:
+#         lower_string = string.lower()
+#         return lower_string
+
+with open("game/helpers/words-for-hangman.txt", "r", encoding="utf-8") as f:
+    words_from_list = f.readlines()
+# words_to_string = str(words_from_list)
+words = random.choice(words_from_list)[:-1]
 
 
 highscore = SHEET.worksheet("hangman_sheet")
-word = stringing()
+word = words
+print(f"{word}")
 first_place = highscore.row_values(2)
 second_place = highscore.row_values(3)
 third_place = highscore.row_values(4)

@@ -1,12 +1,12 @@
 import time
 import os
+import random
 from art import tprint
 from .ascii_art import (print_hangman)
 from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
                        FINISHED, SCORE, RULES_LIST,
-                       stringing, SCORE_LIST, first_place,
-                       second_place, third_place)
-
+                       SCORE_LIST, first_place,
+                       second_place, third_place, words_from_list)
 
 
 def clear():
@@ -62,7 +62,8 @@ def get_nickname():
 
 def rules():
     """
-    Displays rules after setting your nickname up.
+    Displays rules after setting your nickname up,
+    and counts down from 5 to 1 and starts game
     """
     time.sleep(1)
     center_text("Rules")
@@ -141,7 +142,8 @@ def guess_word():
             FINISHED = False
             GUESSES.clear()
             time.sleep(1)
-            word = stringing()
+            word = random.choice(words_from_list)[:-1]
+            print(f"{word}")
             guess_word()
         elif finish == "finish":
             print_new_line()
