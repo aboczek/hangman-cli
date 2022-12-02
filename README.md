@@ -90,7 +90,7 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 </details>
 <br>
 
-### Asks for nickname, if nickname empty throws an error!
+### starting game asks for nickname, if nickname empty throws an error!
 <details><summary>Picture</summary>
 <img src="documentation/game-nickname.png" alt="nickname"/>
 <img src="documentation/game-nickname-error.png" alt="throw an error!"/>
@@ -113,33 +113,38 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 ### Guessed the word!
 <details><summary>Picture</summary>
-<img src="documentation/correct-word.png" alt="correct word"/>
+<img src="documentation/game-word-guess-correct-word.png" alt="correct word"/>
 </details>
 <br>
 
 ### Continue/New word printed
 <details><summary>Picture</summary>
-<img src="documentation/new-word-printed.png" alt="new word printed"/>
+<img src="documentation/game-word-guess-new-word.png" alt="new word printed"/>
 </details>
 <br>
 
 ### Game over you are out of lives!
 <details><summary>Picture</summary>
-<img src="documentation/game-over.png" alt="game over"/>
+<img src="documentation/game-word-guess-game-over.png" alt="game over"/>
+</details>
+<br>
+
+### When game over do you want to play again?
+<details><summary>Picture</summary>
+<img src="documentation/game-word-guess-new-game.png" alt="new game"/>
 </details>
 <br>
 
 ### Finish/Saving score and finishing
 <details><summary>Picture</summary>
-<img src="documentation/game-finish.png" alt="finishing game"/>
+<img src="documentation/game-word-guess-finished.png" alt="finishing game"/>
 </details>
 <br>
 
 ### Finished game saves to Google Sheets and sorts it descending/from highest to lowest
 <details><summary>Picture</summary>
-<img src="documentation/adam-heroku.png" alt="picked nickname to save in google sheets"/>
-<img src="documentation/google-sheet.png" alt="google sheets">
-<img src="documentation/google-sheet-js.png" alt="JavaScript in app scripts for google sheets">
+<img src="documentation/game-word-guess-google-sheet.png" alt="google sheets">
+<img src="documentation/game-word-guess-google-sheet-js.png" alt="JavaScript in app scripts for google sheets">
 </details>
 <br>
 
@@ -153,8 +158,9 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 # Bugs
 
-    1. Nickname can be space, tried to figure it out but failed.
-    2. Numbers are taken in as input, made error pop up saying letters only allowed.
+1. Nickname can be space, tried to figure it out but failed so far.
+2. Numbers are taken in as input, made error pop up saying letters only allowed.
+3. Letters or numbers used again throw an error but keep getting added to list of GUESSES.
 
 # Deployment
 
@@ -162,7 +168,7 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 # Credits 
 - Slack Community and my Mentor!
-- Tutor Support, Scott and Joshua!
+- Tutor Support, [Scott](https://github.com/ShavingSeagull) and Joshua!
 - [Simen Daehlin](https://github.com/Eventyret) My Mentor very Helpfull!.
 - [The W3C Markup Validation Service](https://validator.w3.org/) Validation of HTML.
 - [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
