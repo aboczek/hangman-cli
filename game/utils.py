@@ -6,7 +6,7 @@ from .ascii_art import (print_hangman)
 from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
                        FINISHED, SCORE, RULES_LIST,
                        SCORE_LIST, first_place,
-                       second_place, third_place, words_from_list)
+                       second_place, third_place, get_response_from_api)
 
 
 def clear():
@@ -54,7 +54,7 @@ def get_nickname():
         get_nickname()
     print_new_line()
     time.sleep(1)
-    print(f"Your nickname is {user_input}.")
+    print(f"Welcome {user_input}, enjoy!")
     print_new_line()
     SCORE_LIST.append(nickname)
     return SCORE_LIST
@@ -109,13 +109,20 @@ def guess_word():
                 print("_", end=" ")
         print_new_line()
 
-        guess_input = input("Guess the letter: \n")
-        GUESSES.append(guess_input.lower())
+        guess_input = input("\nGuess the letter: ")
 
-        if guess_input == "":
-            print("\n Warning! your input cannot be empty")
+        if guess_input in GUESSES:
+            print(f"\n Letter '{guess_input}' has already been used!")
+            GUESS_MISTAKE += 1
+
+        GUESSES.append(guess_input.lower())
+        time.sleep(1.5)
+        print("\nLetters already used:\n", ', '.join(GUESSES))
+        if guess_input == "" or len(guess_input) != 1:
+            print("\n Warning! Too many letters or input is empty!")
 
         if guess_input.lower() not in word.lower():
+            time.sleep(1)
             GUESS_MISTAKE -= 1
             print_hangman(GUESS_MISTAKE)
             if GUESS_MISTAKE == 0:
@@ -133,19 +140,18 @@ def guess_word():
         print(f"your score is {SCORE}")
         print_new_line()
         finished_input = input("Do you want to 'continue' or 'finish'?\n")
-        finish = finished_input.lower()
         print_new_line()
-        if finish == "continue":
+        if finished_input.lower() == "continue":
             clear()
             center_text("New word:")
             time.sleep(1)
             FINISHED = False
             GUESSES.clear()
             time.sleep(1)
-            word = random.choice(words_from_list)[:-1]
+            word = get_response_from_api()
             print(f"{word}")
             guess_word()
-        elif finish == "finish":
+        elif finished_input.lower() == "finish":
             print_new_line()
             time.sleep(1)
             print("saving..")
@@ -158,5 +164,18 @@ def guess_word():
             print("Abandoning the ship run the game agian")
     else:
         print("You lost all of ur lifes")
+        print(f"The word was '{word}'")
         print_new_line()
         center_text("Game Over")
+        time.sleep(1)
+        print("Do you want to play again?")
+        print_new_line()
+        time.sleep(1)
+        game_over_input = input("'yes' or 'no' ?\n")
+        if game_over_input.lower() in ["yes", "y", "1"]:
+            clear()
+            GUESSES.clear()
+            word = get_response_from_api()
+            guess_word()
+        else:
+            print("Thank you for playing!")
