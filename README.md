@@ -55,35 +55,15 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 - Expect game to provide random word.
 - Expect game to check if provided input is correct.
 
-## Design
+## Appflow
 
-- Colors
+- Start
 
-    ***placeholder***
+- Game
 
-- Fonts
-
-    ***placeholder***
-
-- Images
-
-    ***placeholder***
 
 [Back to top](#hangman)
 
-## Wireframes
-
-- Mobile
-
-    ***placeholder***
-
-- Tablet
-
-    ***placeholder***
-
-- Desktop
-
-    ***placeholder***
 
 # Technology, Frameworks and Programs used.
 
@@ -174,7 +154,8 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 # Bugs
 
-    ***Placeholder***
+    1. Nickname can be space, tried to figure it out but failed.
+    2. Numbers are taken in as input, made error pop up saying letters only allowed.
 
 # Deployment
 
@@ -182,11 +163,8 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 # Credits 
 - Slack Community and my Mentor!
-- Tutor Support.
+- Tutor Support, Scott and Joshua!
 - [Simen Daehlin](https://github.com/Eventyret) My Mentor very Helpfull!.
 - [The W3C Markup Validation Service](https://validator.w3.org/) Validation of HTML.
 - [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
-- [JS Hint](https://jshint.com/) Debugging code. **************
 - [AmIresponsive](https://ui.dev/amiresponsive) for responsive look of my website.
-- [Autoprefixer](https://autoprefixer.github.io/) used to prefix CSS. **************
-- [Colorhexa](https://www.colorhexa.com/) was used to take colors from for readme.************

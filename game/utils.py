@@ -119,7 +119,7 @@ def guess_word():
             GUESS_MISTAKE += 1
 
         GUESSES.append(guess_input.lower())
-        time.sleep(1.5)
+        time.sleep(1)
         print("\nLetters used already:\n", ', '.join(GUESSES))
         if guess_input == "" or len(guess_input) != 1:
             print("\n Warning! Too many letters or input is empty!")
@@ -144,7 +144,7 @@ def guess_word():
         print_new_line()
         finished_input = input("Do you want to 'continue' or 'finish'?\n")
         print_new_line()
-        if finished_input.lower() == "continue":
+        if finished_input.lower() in ["continue", "c", "1"]:
             clear()
             center_text("New word:")
             time.sleep(1)
@@ -154,7 +154,7 @@ def guess_word():
             word = get_response_from_api()
             print(f"{word}")
             guess_word()
-        elif finished_input.lower() == "finish":
+        elif finished_input.lower() in ["finished", "f ", "2"]:
             print_new_line()
             time.sleep(1)
             print("saving..")
