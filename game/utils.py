@@ -154,7 +154,7 @@ def guess_word():
             word = get_response_from_api()
             print(f"{word}")
             guess_word()
-        elif finished_input.lower() in ["finished", "f ", "2"]:
+        elif finished_input.lower() in ["finish", "f ", "2"]:
             print_new_line()
             time.sleep(1)
             print("saving..")
@@ -164,7 +164,7 @@ def guess_word():
             return SCORE_LIST
         else:
             print("Ohh I see you put wrong input..")
-            print("Abandoning the ship run the game agian")
+            print("Abandoning the ship run the game again")
     else:
         print("You lost all of ur lifes")
         print(f"The word was '{word}'")

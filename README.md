@@ -80,35 +80,34 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 ### Main menu where you Type "start" to start the game or "highscore" to display top 3 scores(filled in with placeholders)
 <details><summary>Picture</summary>
-<img src="documentation/start-highscore.png" alt="main menu"/>
+<img src="documentation/game_start.png" alt="main menu"/>
 </details>
 <br>
 
-### Highscore, if you type in "return" it will return to the main menu above^
+### Highscore, if you press 'Enter' it will return to the main menu above^
 <details><summary>Picture</summary>
-<img src="documentation/highscore.png" alt="highscore"/>
+<img src="documentation/game-highscore.png" alt="highscore"/>
 </details>
 <br>
 
 ### Asks for nickname, if nickname empty throws an error!
 <details><summary>Picture</summary>
-<img src="documentation/nickname.png" alt="nickname"/>
-<img src="documentation/nickname-error.png" alt="throw an error!">
+<img src="documentation/game-nickname.png" alt="nickname"/>
+<img src="documentation/game-nickname-error.png" alt="throw an error!"/>
 </details>
 <br>
 
 ### Rules, displays Rules in Ascii and prints out rules
 <details><summary>Picture</summary>
-<img src="documentation/nickname.png" alt="rules ascii"/>
-<img src="documentation/nickname-error.png" alt="rules">
+<img src="documentation/game-word-guess-rules.png" alt="rules ascii"/>
 </details>
 <br>
 
 ### Word being displayed!
 <details><summary>Picture</summary>
-<img src="documentation/guess-word.png" alt="word displayed"/>
-<img src="documentation/guess-word-correct-letter.png" alt="correct letter">
-<img src="documentation/guess-word-wrong-letter.png" alt="error">
+<img src="documentation/game-guess-word.png" alt="word displayed"/>
+<img src="documentation/game-word-guess-correct-letter.png" alt="correct letter"/>
+<img src="documentation/game-word-guess-wrong-letter.png" alt="error"/>
 </details>
 <br>
 
