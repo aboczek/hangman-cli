@@ -9,23 +9,16 @@ This is Portfolio Project 3 called Hangman
 
 - [Motivation](#)
 - [User Experience](#)
-    - [User Stories](#)
-    - [Website Goals](#)
-    - [Requirements](#)
-    - [Expectations](#)
-    - [Design](#)
-    - [Wireframes](#)
-        - [Desktop](#)
-        - [Tablet](#)
-        - [Mobile](#)
-- [Website Structure](#)
+    - [User Stories](#user-stories)
+    - [Project Goal](#project-goal)
+    - [Requirements and Expectations](#requirements-and-expectations)
+    - [AppFlow](#appflow)
 - [Technology, Frameworks and Programs used](#d)
-    - [Languages](#)
-    - [Frameworks and programs used](#)
-- [Features](#)
-    - [Navigation bar](#)
-- [Testing](#)
-- [Testing user stories](#)
+    - [Languages](#languages)
+    - [Dependencies and Programs used](#dependencies-and-frameworks)
+- [Features](#features)
+- [Testing](#testing)
+- [Testing user stories](#testing-user-stories)
 - [Deployment](#deployment)
 - [Credits](#credits)
 
@@ -57,10 +50,15 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 ## Appflow
 
-- Start
+- Starting logic containing Start and Highscore.
+<br>
 
-- Game
+    <img src="documentation/PP3-start-logic.png" alt="App flow for start logic">
 
+- Game logic containing everything else that happens in game from printing the word to checking it and saving score.
+<br>
+
+    <img src="documentation/PP3-game-logic.png" alt="App flow for game logic">
 
 [Back to top](#hangman)
 
@@ -71,7 +69,7 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-## Programs and Frameworks
+## Dependencies and Frameworks
 
 - [Lucid Charts](https://www.lucidchart.com/)
     -  Used for logic charts
