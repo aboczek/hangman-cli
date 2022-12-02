@@ -110,6 +110,9 @@ def guess_word():
         print_new_line()
 
         guess_input = input("\nGuess the letter: ")
+        if not guess_input.isalpha():
+            print("\nOnly letters allowed!")
+            GUESS_MISTAKE += 1
 
         if guess_input in GUESSES:
             print(f"\n Letter '{guess_input}' has already been used!")
@@ -117,7 +120,7 @@ def guess_word():
 
         GUESSES.append(guess_input.lower())
         time.sleep(1.5)
-        print("\nLetters already used:\n", ', '.join(GUESSES))
+        print("\nLetters used already:\n", ', '.join(GUESSES))
         if guess_input == "" or len(guess_input) != 1:
             print("\n Warning! Too many letters or input is empty!")
 
@@ -174,6 +177,7 @@ def guess_word():
         game_over_input = input("'yes' or 'no' ?\n")
         if game_over_input.lower() in ["yes", "y", "1"]:
             clear()
+            center_text("New Game:")
             GUESSES.clear()
             word = get_response_from_api()
             guess_word()
