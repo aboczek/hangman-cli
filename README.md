@@ -53,12 +53,12 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 - Starting logic containing Start and Highscore.
 <br>
 
-    <img src="documentation/PP3-start-logic.png" alt="App flow for start logic">
+<img src="documentation/PP3-start-logic.png" alt="App flow for start logic">
 
 - Game logic containing everything else that happens in game from printing the word to checking it and saving score.
 <br>
 
-    <img src="documentation/PP3-game-logic.png" alt="App flow for game logic">
+<img src="documentation/PP3-game-logic.png" alt="App flow for game logic">
 
 [Back to top](#hangman)
 
@@ -166,7 +166,7 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 # Credits 
 - Slack Community and my Mentor!
-- Tutor Support, [Scott](https://github.com/ShavingSeagull) and Joshua!
+- Tutor Support, [Scott](https://github.com/ShavingSeagull) and [Joshua](https://github.com/LordButley)
 - [Simen Daehlin](https://github.com/Eventyret) My Mentor very Helpfull!.
 - [The W3C Markup Validation Service](https://validator.w3.org/) Validation of HTML.
 - [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
