@@ -137,7 +137,7 @@ def guess_word():
 
     if FINISHED:
         SCORE += 1
-        print("Congratulations you guessed the word")
+        print(f"Congratulations you guessed the word '{word}'")
         print_new_line()
         print(f"your score is {SCORE}")
         print_new_line()

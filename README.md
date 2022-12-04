@@ -32,6 +32,7 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 ## User Stories
 - I want user to be able to run and play the game in their browser.
 - I want user to be able to put there nickname in game.
+- I want user to be able to see rules of the game.
 - I want user to be able to save their score if they guess the word correctly if they decide to finish.
 - I want user to be able to guess the words letters replaced with _ and if guessed correctly to replace them with correct letter.
 - I want user to display highscore of top 3 scores(they are filled in with placeholders to display).
@@ -246,7 +247,73 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
 
 ## Testing User Stories
 
-- ***Placeholder***
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| I want user to be able to run and play the game in their browser | You need to run link in my github or open link to heroku I provide| heroku link opens and game starts | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/user-story-1.png" alt="Link to game"/>
+<img src="documentation/user-story-2.png" alt="Link open in browser"/>
+</details>
+<br>
+
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| I want user to be able to put there nickname in game | When you run game and type in start game will start and prompt to input your nickname and then display it | game start and displays nick provided | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/user-story-3.png" alt="prompt for nickname"/>
+<img src="documentation/user-story-4.png" alt="nickname displayed"/>
+</details>
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| I want user to be able to see rules of the game. | start the game, rules will display on its own | rules to be displayed | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/game-word-guess-rules.png" alt="rules being displayed"/>
+</details>
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| I want user to be able to save their score if they guess the word correctly if they decide to finish | When you guessed word or words correctly and want to finish your score will be saved | Score being saved after user inputs finish after guessing word correctly | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/game-word-guess-finished.png" alt="prompt for nickname"/>
+</details>
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| I want user to be able to guess the words letters replaced with _ and if guessed correctly to replace them with correct letter | when game starts and rules are displayed game start printing word to guess | guess correct letter from word | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/game-word-guess-correct-word.png" alt="word was guessed right"/>
+</details>
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| I want user to display highscore of top 3 scores(they are filled in with placeholders to display) | at beginning you type in highscore/h or 2 to display highscores | top3 highscores will be displayed | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/game-highscore.png" alt="highscore displayed"/>
+</details>
+<br>
+
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| I want user to have 7 lives and if you use all of them to be displayed with Game Over text | User needs to play game, you have 7 lives each game | 7 lives corresponding to hangman parts | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/game-word-guess-game-over.png" alt="highscore displayed"/>
+</details>
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| I want user to be able to play game again if they lost all of their lives by playing game again | If you lose all of your lives you can choose to pick to play again | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/game-word-guess-new-game.png" alt="highscore displayed"/>
+</details>
+<br>
 
 # Bugs
 
