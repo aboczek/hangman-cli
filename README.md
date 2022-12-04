@@ -324,13 +324,144 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
 
 # Deployment
 
-    ***Placeholder***
+## Google sheets deployment
+1. Go to [Google Sheets](https://www.google.com/sheets/about/) or google a "Google Sheets" and press first link saying **Google Sheets: Online Spreadsheet Editor**.
+2. Login with your email.
+3. Press Blank same as on image below.
+    <details><summary>Picture</summary>
+    <img src="documentation/google-sheets-create.png" alt="google sheets"/>
+    </details>
+    <br>
+
+4. Rename file to whatever you like! we will call it **hangman**.
+    <details><summary>Picture</summary>
+    <img src="documentation/google-sheets-1.png" alt="rename google sheets"/>
+    </details>
+    <br>
+
+5. Open another tab and open [Google Cloud](https://cloud.google.com/) or google **Google Cloud Platform** and press link saying **Google Cloud: Cloud Computing Services**.
+
+6. Press on Console top right beside Icon of your email.
+    <details><summary>Picture</summary>
+    <img src="documentation/google-sheets-2.png" alt="google cloud"/>
+    </details>
+    <br>
+
+7. Press **My First Project** and click **NEW PROJECT** and name your new project to **hangman** and press **Create**.
+    <details><summary>Picture</summary>
+    <img src="documentation/google-sheets-6.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-7.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-8.png" alt="google cloud"/>
+    </details>
+    <br>
+
+8. Type in **Google Drive API** and press **Enable**
+    <details><summary>Picture</summary>
+    <img src="documentation/google-sheets-3.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-4.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-5.png" alt="google cloud"/>
+    </details>
+    <br>
+
+9. Press **CREATE CREDENTIALS** next page should open and drop down menu should be selected on **Google Drive API** if its not look for it there, then press **Aplication data** and **No, I'm not using them**
+    <details><summary>Picture</summary>
+    <img src="documentation/google-sheets-9.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-10.png" alt="google cloud"/>
+    </details>
+    <br>
+
+10. Type in in first row **hangman** or whatever you like and press **CREATE AND CONTINUE**, after that select **Basic** and then select **Editor**, menu will hide and press **CONTINUE**. Next leave those two rows empty and press **DONE**
+    <details><summary>Picture</summary>
+    <img src="documentation/google-sheets-11.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-12.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-13.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-14.png" alt="google cloud"/>
+    </details>
+    <br>
+
+11. Press **Credentials** and press on the email shown on the picture below, next press **KEYS** and press button **ADD KEY**, another little menu will come out and press **Create new key**.
+    <details><summary>Picture</summary>
+    <img src="documentation/google-sheets-15.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-16.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-17.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-18.png" alt="google cloud"/>
+    </details>
+    <br>
+
+12. Menu will pop out and press **JSON** and **CREATE**. File will start to download, keep it safe dont show to anyone. Press **SHOW ALL** on right hand side on download panel. Keep in mind where that JSON file is saved, you will need it later on.
+    <details><summary>Picture</summary>
+    <img src="documentation/google-sheets-19.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-20.png" alt="google cloud"/>
+    </details>
+    <br>
+
+13. On top in search bar type in **Google Sheets API**, scroll down until you find it. Press **Enable**
+    <details><summary>Picture</summary>
+    <img src="documentation/google-sheets-21.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-22.png" alt="google cloud"/>
+    <img src="documentation/google-sheets-23.png" alt="google cloud"/>
+    </details>
+    <br>
+
+14. Go to [GitHub](https://github.com/) and login if you arent, then go to [this link](https://github.com/aboczek/hangman-cli). My repository will open, press **< CODE >** and press **Local** then press Copy to clipboard button.
+    <details><summary>Picture</summary>
+    <img src="documentation/github-repo-1.png" alt="github"/>
+    </details>
+    <br>
+
+15. Go to your github repositories and create new repo, call it whatever you like. Press **Create Repository** it will lead you to another page, and press **Gitpod** it should open workspace for you.
+    <details><summary>Picture</summary>
+    <img src="documentation/github-repo-2.png" alt="github"/>
+    <img src="documentation/github-repo-3.png" alt="github"/>
+    <img src="documentation/github-repo-4.png" alt="github"/>
+    </details>
+    <br>
+
+16. When Gitpod is open, type in in git bash following "**git clone https://github.com/aboczek/hangman-cli.git**" without quotation marks, and press enter. It will clone my repository.
+    <details><summary>Picture</summary>
+    <img src="documentation/github-repo-5.png" alt="github"/>
+    <img src="documentation/github-repo-6.png" alt="github"/>
+    </details>
+    <br>
+
+17. When everything is ready, type in **cd hangman-cli** it should change directory to it. Now you need to download libraries I'm using in my project list is as following.
+    - pip install art
+    - pip install gspread
+
+18. Now we need to copy our JSON file into the hangman-cli directory, open your **Downloads** or where your downloads go to and copy file by draggin it in into main folder, When its done right click on file and rename it to **creds.json**. Make sure its in the right place otherwise game wont run throwing an errors.
+    <details><summary>Picture</summary>
+    <img src="documentation/github-repo-7.png" alt="github"/>
+    </details>
+    <br>
+
+19. Now go back to Google sheets and open your [worksheet](https://docs.google.com/spreadsheets/u/0/?tgif=d), in row/column B1 write in **Name** and C1 write in **Score**, next rename your working sheet to **hangman_sheet**
+    <details><summary>Picture</summary>
+    <img src="documentation/github-repo-8.png" alt="github"/>
+    </details>
+    <br>
+
+20. Go back to your gitpod and left click on creds.json and copy **client email** then go back to your worksheet and press **Share** then copy in the **client email**, next step is to uncheck notify people as on picture below.
+    <details><summary>Picture</summary>
+    <img src="documentation/github-repo-9.png" alt="github"/>
+    <img src="documentation/github-repo-10.png" alt="github"/>
+    <img src="documentation/github-repo-11.png" alt="github"/>
+    <img src="documentation/github-repo-12.png" alt="github"/>
+    </details>
+    <br>
+
+21. Congratulations, if you have done everything as said above your game should run and should look like this.
+    <details><summary>Picture</summary>
+    <img src="documentation/github-repo-13.png" alt="github"/>
+    </details>
+    <br>
+
+
 
 # Credits 
 - Slack Community and my Mentor!
 - Tutor Support, [Scott](https://github.com/ShavingSeagull) and [Joshua](https://github.com/LordButley)
 - [Simen Daehlin](https://github.com/Eventyret) My Mentor very Helpfull!.
-- [The W3C Markup Validation Service](https://validator.w3.org/) Validation of HTML.
-- [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
 - [AmIresponsive](https://ui.dev/amiresponsive) for responsive look of my website.
 - [Officedemy](https://www.officedemy.com/how-to-automatically-sort-in-google-sheets/) JS code to sort score highest to lowest.
+- [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/) for clear function to clear terminal.
+- [PEP8 by CI](https://pep8ci.herokuapp.com/#) used to linter python code.
