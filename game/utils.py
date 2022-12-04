@@ -3,9 +3,9 @@ import os
 from art import tprint
 from .ascii_art import (print_hangman)
 from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
-                      FINISHED, SCORE, RULES_LIST,
-                      SCORE_LIST, first_place,
-                      second_place, third_place, get_response_from_api)
+                       FINISHED, SCORE, RULES_LIST,
+                       SCORE_LIST, first_place,
+                       second_place, third_place, get_response_from_api)
 
 
 def clear():

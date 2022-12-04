@@ -194,9 +194,55 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
 
 6. I had one issue with indentation as well that wouldnt check if all letters are correct and if so to finish the game.
     <details><summary>Picture</summary>
-    <img src="documentation/bug-finish-indentation.png" alt="words displayed more than once">
+    <img src="documentation/bug-finish-indentation.png" alt="indentation error">
     </details>
 <br>
+
+7. I found issue where hangman ascii wouldnt print, had to reasign variable with lives to be as with starting the game!
+    <details><summary>Picture</summary>
+    <img src="documentation/hangman-new-game.png" alt="hangman wouldnt print ascii art">
+    </details>
+<br>
+
+## PEP8 Linter from Code Institute
+
+- run.py ran through pep8 linter and found no errors
+    <details><summary>Picture</summary>
+    <img src="documentation/linter_1.png" alt="no errors">
+    </details>
+<br>
+
+- utils.py ran through pep8 linter and found no errors
+    <details><summary>Picture</summary>
+    <img src="documentation/linter_2.png" alt="no errors">
+    </details>
+<br>
+
+- ascii_art.py ran through pep8 linter and errors are found, they are justified to print ascii art for hangman.
+    <details><summary>Picture</summary>
+    <img src="documentation/linter_3_hangman.png" alt="error for ascii art">
+    </details>
+<br>
+
+- game.py ran through pep8 linter and no errors found.
+    <details><summary>Picture</summary>
+    <img src="documentation/linter_4.png" alt="no errors">
+    </details>
+<br>
+
+- api.py ran through pep8 linter and no errors found.
+    <details><summary>Picture</summary>
+    <img src="documentation/linter_5.png" alt="no errors found">
+    </details>
+<br>
+
+- settings.py ran through pep8 linter and no errors found.
+    <details><summary>Picture</summary>
+    <img src="documentation/linter_6.png" alt="no errors found">
+    </details>
+<br>
+
+
 
 ## Testing User Stories
 
