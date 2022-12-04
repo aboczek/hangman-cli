@@ -1,6 +1,5 @@
 import time
 import os
-import random
 from art import tprint
 from .ascii_art import (print_hangman)
 from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
@@ -152,7 +151,6 @@ def guess_word():
             GUESSES.clear()
             time.sleep(1)
             word = get_response_from_api()
-            print(f"{word}")
             guess_word()
         elif finished_input.lower() in ["finish", "f ", "2"]:
             print_new_line()
