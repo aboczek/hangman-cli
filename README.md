@@ -31,14 +31,16 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 ## User Stories
 - I want user to be able to run and play the game in their browser.
-- I want user to be able to input data into the game.
-- I want user to see if they got the word correctly or not.
-- I want user to be able to save the score.
-- ***placeholder for more data***
+- I want user to be able to put there nickname in game.
+- I want user to be able to save their score if they guess the word correctly if they decide to finish.
+- I want user to be able to guess the words letters replaced with _ and if guessed correctly to replace them with correct letter.
+- I want user to display highscore of top 3 scores(they are filled in with placeholders to display).
+- I want user to have 7 lives and if you use all of them to be displayed with Game Over text.
+- I want user to be able to play game again if they lost all of their lives by playing game again.
 
 ## Project Goal
 
-- Projects goal is to play Hangman game, check if provided input is correct or not and save the score.
+- Projects goal is to play Hangman game, check if provided input is correct or not, save the score and display highscores.
 
 ## Requirements and Expectations
 
@@ -47,6 +49,7 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 - Expect website to save score.
 - Expect game to provide random word.
 - Expect game to check if provided input is correct.
+- Expect game to have highscore system displayed at begining.
 
 ## Appflow
 

@@ -1,5 +1,5 @@
-import requests
 import random
+import requests
 
 
 def words_to_play():
