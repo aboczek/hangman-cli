@@ -309,7 +309,7 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
 
 | **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
 |---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
-| I want user to be able to play game again if they lost all of their lives by playing game again | If you lose all of your lives you can choose to pick to play again | PASS              |
+| I want user to be able to play game again if they lost all of their lives by playing game again | Type in at game over yes to play again | If you lose all of your lives you can choose to pick to play again | PASS              |
 <details><summary>Picture</summary>
 <img src="documentation/game-word-guess-new-game.png" alt="highscore displayed"/>
 </details>
