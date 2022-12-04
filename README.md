@@ -72,10 +72,35 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    - Sorting data in google sheets descending order on changes in file.
+    <img src="documentation/game-word-guess-google-sheet-js.png" alt="App scripts google sheets">
+
 ## Dependencies and Frameworks
 
 - [Lucid Charts](https://www.lucidchart.com/)
-    -  Used for logic charts
+    - Used for logic charts
+
+- [Gspread](https://docs.gspread.org/en/v5.7.0/)
+    - Used to access google sheets to manipulate, save and read data of it.
+
+- [Time Library](https://docs.python.org/3/library/time.html)
+    - Used to time code execution.
+
+- [Random Library](https://docs.python.org/3/library/random.html)
+    - Used to randomize words if API is down giving status code 503.
+
+- [OS](https://docs.python.org/3/library/os.html)
+    - Used to clear terminal before new word is being displayed.
+
+- [Art](https://pypi.org/project/art/)
+    - Used to make ASCII art from words used in function center_text.
+
+- [PEP8 Code Institute](https://pep8ci.herokuapp.com/#)
+    - Used to linter Python code and see if any mistakes or issues come up.
+
+- [Random word API](https://random-word-api.herokuapp.com/home)
+    - Used to display random word, was down for a while and had to develop defensive code for that.
 
 # Features
 
@@ -151,7 +176,27 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 # Testing
 
-***loads of placeholders***
+1. I have tested my game so many times in gitpod terminal itself having issues and bugs thrown left and right. Big issue was when API would pass you a string of words that would include "" and []. I had to get rid of those and then take the words and put in new list of words and then pass it on to another function to accept lower case letters.
+
+2. Another issue i came up was same word being assigned more than once, function wouldnt roll another word from list or API.
+I had to reasign variable again before function was called again to pick another word.
+    <details><summary>Picture</summary>
+    <img src="documentation/bug-same-word-more-than-once.png" alt="words displayed more than once">
+    </details>
+<br>
+
+3. I have encountered bug where if I have checked if input user provides is Yes or No it would always be Yes or True.
+I had to redo the checking instead of **user_input == "yes" or "no"** made it as **user_input in ["yes", "no"]** that solved my issue and changed all if statements checking users input.
+
+4. I have encountered issue with putting capital letters or lower case letters in guessing or users input where it would throw errors that its invalid input, as I assigned in defensive code. I had to make **user_input.lower()** in every input check so even if its capital letter in guessed letter it would adjust it and not throw error for invalid input.
+
+5. Biggest issue i have encountered was when API died, I had to develop function that checks if its responding giving error 200 or not responding giving error 503. I have made a function that checks the status code and if its 503 to use txt file with words in it, and if its responding to use the API.
+
+6. I had one issue with indentation as well that wouldnt check if all letters are correct and if so to finish the game.
+    <details><summary>Picture</summary>
+    <img src="documentation/bug-finish-indentation.png" alt="words displayed more than once">
+    </details>
+<br>
 
 ## Testing User Stories
 
@@ -162,6 +207,7 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 1. Nickname can be space, tried to figure it out but failed so far.
 2. Numbers are taken in as input, made error pop up saying letters only allowed.
 3. Letters or numbers used again throw an error but keep getting added to list of GUESSES.
+4. If API is down, txt file will give words in defensive code but there is chance of same word coming up more than once.
 
 # Deployment
 
@@ -174,3 +220,4 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 - [The W3C Markup Validation Service](https://validator.w3.org/) Validation of HTML.
 - [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
 - [AmIresponsive](https://ui.dev/amiresponsive) for responsive look of my website.
+- [Officedemy](https://www.officedemy.com/how-to-automatically-sort-in-google-sheets/) JS code to sort score highest to lowest.
