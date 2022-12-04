@@ -3,9 +3,9 @@ import os
 from art import tprint
 from .ascii_art import (print_hangman)
 from .settings import (word, highscore, GUESSES, GUESS_MISTAKE,
-                       FINISHED, SCORE, RULES_LIST,
-                       SCORE_LIST, first_place,
-                       second_place, third_place, get_response_from_api)
+                      FINISHED, SCORE, RULES_LIST,
+                      SCORE_LIST, first_place,
+                      second_place, third_place, get_response_from_api)
 
 
 def clear():
@@ -98,7 +98,7 @@ def guess_word():
     """
     Draws random word from list and makes it guessable
     """
-    global word, GUESSES, GUESS_MISTAKE, FINISHED, SCORE, nickname
+    global word, GUESS_MISTAKE, FINISHED, SCORE
     while not FINISHED:
         print_new_line()
         for letter in word:
@@ -175,6 +175,7 @@ def guess_word():
         game_over_input = input("'yes' or 'no' ?\n")
         if game_over_input.lower() in ["yes", "y", "1"]:
             clear()
+            GUESS_MISTAKE = 7
             center_text("New Game:")
             GUESSES.clear()
             word = get_response_from_api()

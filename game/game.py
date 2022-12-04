@@ -1,6 +1,6 @@
 import time
 from .utils import (get_nickname, rules, guess_word, print_new_line,
-                    show_highscore)
+                   show_highscore)
 
 
 def start_game():
