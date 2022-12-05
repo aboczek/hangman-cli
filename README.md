@@ -326,6 +326,7 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
 
 ## Google sheets deployment
 <br>
+
 1. Go to [Google Sheets](https://www.google.com/sheets/about/) or google a "Google Sheets" and press first link saying **Google Sheets: Online Spreadsheet Editor**.
 2. Login with your email.
 3. Press Blank same as on image below.
