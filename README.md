@@ -325,6 +325,7 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
 # Deployment
 
 ## Google sheets deployment
+<br>
 1. Go to [Google Sheets](https://www.google.com/sheets/about/) or google a "Google Sheets" and press first link saying **Google Sheets: Online Spreadsheet Editor**.
 2. Login with your email.
 3. Press Blank same as on image below.
@@ -403,6 +404,9 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
     </details>
     <br>
 
+## GitHub/GitPod
+<br>
+
 14. Go to [GitHub](https://github.com/) and login if you arent, then go to [this link](https://github.com/aboczek/hangman-cli). My repository will open, press **< CODE >** and press **Local** then press Copy to clipboard button.
     <details><summary>Picture</summary>
     <img src="documentation/github-repo-1.png" alt="github"/>
@@ -417,7 +421,7 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
     </details>
     <br>
 
-16. When Gitpod is open, type in in git bash following "**git clone https://github.com/aboczek/hangman-cli.git**" without quotation marks, and press enter. It will clone my repository.
+16. When Gitpod is open, type in git bash following "**git clone https://github.com/aboczek/hangman-cli.git**" without quotation marks, and press enter. It will clone my repository.
     <details><summary>Picture</summary>
     <img src="documentation/github-repo-5.png" alt="github"/>
     <img src="documentation/github-repo-6.png" alt="github"/>
@@ -455,8 +459,98 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
     </details>
     <br>
 
+22. In your workspace type in **cd hangman-cli** and then **git remote rename origin upstream** that should create your own version of project. Next type in **git remote add origin http://github.com/YOU/YOUR_REPO**(do not open the link leads to nowhere just drag text and copy it) if you are confused you can follow this [link](https://stackoverflow.com/questions/18200248/cloning-a-repo-from-someone-elses-github-and-pushing-it-to-a-repo-on-my-github). I have used it myself.
 
+23. Check if your repo has assigned new repo address by typing in **git remote -v** origin should reach to your github upstream should reach to mine.
 
+24. If everything is alright type in **git add .**, then **git commit -m "write whatever u wnt"** and then **git push origin main --force** We use force to push the files we have cloned otherwise it will try to fetch new files from my repository.
+
+25. Check your github repo if all the files are pushed correctly.
+
+26. Open your google sheets, now we can add JavaScript code to sort scores from highest to lowest. You will need to add Dummy data into the worksheet otherwise it will throw errors, next click **extensions** and **App Script**.
+    <details><summary>Picture</summary>
+    <img src="documentation/github-repo-14.png" alt="github"/>
+    </details>
+    <br>
+
+27. Copy in this code down below.
+    ```
+    function dataSorting() {
+    const ss = SpreadsheetApp.getActiveSpreadsheet()
+    const sheet = ss.getSheetByName("hangman_sheet")
+    const lastRow = sheet.getRange(2,2,sheet.getLastRow()-1,3)
+    lastRow.sort({column:3,ascending: false});
+    }
+    ```
+
+28. Press **Run** and it will ask you for permissions. You need to review privilages and allow them like on pictures below. 
+    <details><summary>Picture</summary>
+    <img src="documentation/github-repo-15.png" alt="github"/>
+    <img src="documentation/gitpod-repo-16.png" alt="github"/>
+    <img src="documentation/google-sheets-authorise.png" alt="github"/>
+    </details>
+    <br>
+
+29. When you have that done go back to your **App Script** and press **Run** two yellow boxes should appear on the bottom saying about Notice that execution started and completed, that means code is working.
+    <details><summary>Picture</summary>
+    <img src="documentation/gitpod-repo-17.png" alt="github"/>
+    </details>
+    <br>
+
+30. Now we need to add event listener, press clock logo on left side, and then press **create new trigger** then window will pop up. We chose which function to run like on picture below, and select event type we choose **On change** and save. You can go back to **< >** code section of App Script and Save the code if you havent by now. Nothing needs to be done more than it is now and it will run when there is any change done into the google sheets.
+    <details><summary>Picture</summary>
+    <img src="documentation/gitpod-repo-event.png" alt="github"/>
+    <img src="documentation/gitpod-repo-18.png" alt="github">
+    <img src="documentation/gitpod-repo-19.png" alt="github">
+    </details>
+    <br>
+## Heroku 
+
+31. Go to [Heroku](https://id.heroku.com/login) and login to your account.
+
+32. On top right corner you have **New** press it and **Create new app**, next (1)name your app whatever you like then (2)pick server: europe, and (3) press **Create app**
+    <details><summary>Picture</summary>
+    <img src="documentation/heroku-1.png" alt="heroku"/>
+    <img src="documentation/heroku-2.png" alt="heroku"/>
+    </details>
+    <br>
+
+33. Go to **Settings** and press **Reveal Config Vars**. Now go to your workspace and copy entire **creds.json** content, and in **KEY** type in **CREDS** in **VALUE** Copy content of **creds.json** and **press ADD** then again in **KEY** type in **PORT** and **VALUE** type in **8000**.
+    <details><summary>Picture</summary>
+    <img src="documentation/heroku-3.png" alt="heroku"/>
+    <img src="documentation/heroku-4.png" alt="heroku"/>
+    <img src="documentation/heroku-5.png" alt="heroku"/>
+    </details>
+    <br>
+
+34. Now scroll down until you see **Buildpacks**, press **Add buildpack** and pick **python** and **save change** then again **Add buildpack** but this time pick **nodejs** and **save change**. heroku/python should be above nodejs if its not put it as on image below you can drag it by hamburger menu on left side of it or remove with x and add again in correct order.
+    <details><summary>Picture</summary>
+    <img src="documentation/heroku-6.png" alt="heroku"/>
+    <img src="documentation/heroku-7.png" alt="heroku"/>
+    <img src="documentation/heroku-8.png" alt="heroku"/>
+    <img src="documentation/heroku-9.png" alt="heroku"/>
+    </details>
+    <br>
+
+35. Go back to top of the page and click **Deploy**, and click on **GitHub** and connect to it. Next below type in name of your repo and press search, it should automaticaly find the repo.
+    <details><summary>Picture</summary>
+    <img src="documentation/heroku-10.png" alt="heroku"/>
+    <img src="documentation/heroku-11.png" alt="heroku"/>
+    </details>
+    <br>
+
+36. Scroll down and press **Enable Automatic Deploys** then **Deploy Branch** it will deploy the branch.
+    <details><summary>Picture</summary>
+    <img src="documentation/heroku-12.png" alt="heroku"/>
+    </details>
+    <br>
+
+37. Go to the top of the page and press **Open app** it will open new tab with your game in it.
+    <details><summary>Picture</summary>
+    <img src="documentation/heroku-13.png" alt="heroku"/>
+    <img src="documentation/heroku-14.png" alt="heroku"/>
+    </details>
+    <br>
 # Credits 
 - Slack Community and my Mentor!
 - Tutor Support, [Scott](https://github.com/ShavingSeagull) and [Joshua](https://github.com/LordButley)
