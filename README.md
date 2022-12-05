@@ -3,7 +3,7 @@
 This is Portfolio Project 3 called Hangman
 <br>
 <br>
-***placeholder for picutre***
+<img src="documentation/amiresponsive.png" alt="amIresponsive?"/>
 <br>
 <br>
 
@@ -191,7 +191,7 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
 
 4. I have encountered issue with putting capital letters or lower case letters in guessing or users input where it would throw errors that its invalid input, as I assigned in defensive code. I had to make **user_input.lower()** in every input check so even if its capital letter in guessed letter it would adjust it and not throw error for invalid input.
 
-5. Biggest issue i have encountered was when API died, I had to develop function that checks if its responding giving error 200 or not responding giving error 503. I have made a function that checks the status code and if its 503 to use txt file with words in it, and if its responding to use the API.
+5. Biggest issue I have encountered was when API died, I had to develop function that checks if its responding giving error 200 or not responding giving error 503. I have made a function that checks the status code and if its 503 to use txt file with words in it, and if its responding to use the API. After all API was brought back to live and it proved that my Function works, I have ran my game one of the times and saw weird word looked up in txt file and it wasnt there. Opened [Random word API](https://random-word-api.herokuapp.com/home) and website was back live!.
 
 6. I had one issue with indentation as well that wouldnt check if all letters are correct and if so to finish the game.
     <details><summary>Picture</summary>
@@ -432,7 +432,7 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
     - pip install art
     - pip install gspread
 
-18. Now we need to copy our JSON file into the hangman-cli directory, open your **Downloads** or where your downloads go to and copy file by draggin it in into main folder, When its done right click on file and rename it to **creds.json**. Make sure its in the right place otherwise game wont run throwing an errors.
+18. Now we need to copy our JSON file into the hangman-cli directory, open your **Downloads** or where your downloads go to and copy file by dragging it in into main folder, When its done right click on file and rename it to **creds.json**. Make sure its in the right place otherwise game wont run throwing an errors.
     <details><summary>Picture</summary>
     <img src="documentation/github-repo-7.png" alt="github"/>
     </details>
@@ -558,4 +558,8 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
 - [AmIresponsive](https://ui.dev/amiresponsive) for responsive look of my website.
 - [Officedemy](https://www.officedemy.com/how-to-automatically-sort-in-google-sheets/) JS code to sort score highest to lowest.
 - [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/) for clear function to clear terminal.
-- [PEP8 by CI](https://pep8ci.herokuapp.com/#) used to linter python code.
+- [PEP8 by CI](https://pep8ci.herokuapp.com/#) Used to linter python code.
+- [Youtube](https://www.youtube.com/watch?v=5x6iAKdJB6U) Getting the idea how it should look.
+- [Stackoverflow](https://stackoverflow.com/questions/18200248/cloning-a-repo-from-someone-elses-github-and-pushing-it-to-a-repo-on-my-github) Cloning and how to push into your own github repo.
+- [Random word API](https://random-word-api.herokuapp.com/home) Used to pull random words for game.
+    Ps: love and hate with this API it died on me and had to develop defensive code for it if its responding or not.
