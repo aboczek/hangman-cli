@@ -205,6 +205,12 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
     </details>
 <br>
 
+8. I have tested a lot my spreadsheet with JavaScript in it and inserting data from my game to see if it works properly or not and if function inside App Script is actually sorting with descending(from highest to lowest).
+    <details><summary>Picture</summary>
+    <img src="documentation/google-sheets-readme.png" alt="google sheets testing">
+    </details>
+<br>
+
 ## PEP8 Linter from Code Institute
 
 - run.py ran through pep8 linter and found no errors
@@ -321,6 +327,7 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
 2. Numbers are taken in as input, made error pop up saying letters only allowed.
 3. Letters or numbers used again throw an error but keep getting added to list of GUESSES.
 4. If API is down, txt file will give words in defensive code but there is chance of same word coming up more than once.
+
 
 # Deployment
 
