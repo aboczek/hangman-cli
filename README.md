@@ -24,8 +24,8 @@ This is Portfolio Project 3 called Hangman
 
 # Motivation
 
-Portfolio Project 3 is about Hangman game. I have picked it to challenge myself and see how far I can go.
-Main Purpose of this website is to play the game in CLI(Command Line Interface)
+This Project is about Hangman game. I have picked it to challenge myself and see how far I can go.
+Main Purpose of this project is to play the game in a CLI(Command Line Interface)
 
 # User Experience(UX)
 
@@ -74,8 +74,10 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-    - Sorting data in google sheets descending order on changes in file.
-    <img src="documentation/game-word-guess-google-sheet-js.png" alt="App scripts google sheets">
+
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+
+- [HTML](https://en.wikipedia.org/wiki/HTML)
 
 ## Dependencies and Frameworks
 
@@ -177,12 +179,13 @@ Main Purpose of this website is to play the game in CLI(Command Line Interface)
 
 # Testing
 
-1. I have tested my game so many times in gitpod terminal itself having issues and bugs thrown left and right. Big issue was when API would pass you a string of words that would include "" and []. I had to get rid of those and then take the words and put in new list of words and then pass it on to another function to accept lower case letters.
+1. I have tested my game so many times in terminal itself having issues and bugs thrown left and right. Big issue was when API would pass you a string of words that would include "" and []. I had to get rid of those and then take the words and put in new list of words and then pass it on to another function to accept lower case letters.
 
 2. Another issue i came up was same word being assigned more than once, function wouldnt roll another word from list or API.
-I had to reasign variable again before function was called again to pick another word.
+I had to reasign variable again before function was called again to pick another word. Second picture below.
     <details><summary>Picture</summary>
     <img src="documentation/bug-same-word-more-than-once.png" alt="words displayed more than once">
+    <img src="documentation/testing-1.png" alt="code to fix duplicated words">
     </details>
 <br>
 
@@ -191,7 +194,7 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
 
 4. I have encountered issue with putting capital letters or lower case letters in guessing or users input where it would throw errors that its invalid input, as I assigned in defensive code. I had to make **user_input.lower()** in every input check so even if its capital letter in guessed letter it would adjust it and not throw error for invalid input.
 
-5. Biggest issue I have encountered was when API died, I had to develop function that checks if its responding giving error 200 or not responding giving error 503. I have made a function that checks the status code and if its 503 to use txt file with words in it, and if its responding to use the API. After all API was brought back to live and it proved that my Function works, I have ran my game one of the times and saw weird word looked up in txt file and it wasnt there. Opened [Random word API](https://random-word-api.herokuapp.com/home) and website was back live!.
+5. Issue I have encountered was when API died, I had to develop function that checks if its responding giving error 200 or not responding giving error 503. I have made a function that checks the status code and if its 503 to use txt file with words in it, and if its responding to use the API. After all API was brought back to live and it proved that my Function works, I have ran my game one of the times and saw weird word looked up in txt file and it wasnt there. Opened [Random word API](https://random-word-api.herokuapp.com/home) and website was back live!.
 
 6. I had one issue with indentation as well that wouldnt check if all letters are correct and if so to finish the game.
     <details><summary>Picture</summary>
@@ -421,7 +424,8 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
     </details>
     <br>
 
-15. Go to your github repositories and create new repo, call it whatever you like. Press **Create Repository** it will lead you to another page, and press **Gitpod** it should open workspace for you.
+15. Go to your github repositories and create new repo, call it whatever you like. Press **Create Repository** it will lead you to another page, and press **Gitpod** it should open workspace for you. 
+ ***If you use VSCODE on your PC just open new workspace***
     <details><summary>Picture</summary>
     <img src="documentation/github-repo-2.png" alt="github"/>
     <img src="documentation/github-repo-3.png" alt="github"/>
@@ -429,16 +433,17 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
     </details>
     <br>
 
-16. When Gitpod is open, type in git bash following "**git clone https://github.com/aboczek/hangman-cli.git**" without quotation marks, and press enter. It will clone my repository.
+16. When Gitpod or VSCODE is open, type in git bash following "**git clone https://github.com/aboczek/hangman-cli.git**" without quotation marks, and press enter. It will clone my repository, ***if you are looking for better explanation go to this [link](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository?tool=desktop&platform=linux)***
     <details><summary>Picture</summary>
     <img src="documentation/github-repo-5.png" alt="github"/>
     <img src="documentation/github-repo-6.png" alt="github"/>
     </details>
     <br>
 
-17. When everything is ready, type in **cd hangman-cli** it should change directory to it. Now you need to download libraries I'm using in my project list is as following.
-    - pip install art
-    - pip install gspread
+17. When everything is ready, type in **cd hangman-cli** it should change directory to it. Now you need to download libraries I'm using in my project.
+    ```
+    pip3 install -r requirements.txt
+    ```
 
 18. Now we need to copy our JSON file into the hangman-cli directory, open your **Downloads** or where your downloads go to and copy file by dragging it in into main folder, When its done right click on file and rename it to **creds.json**. Make sure its in the right place otherwise game wont run throwing an errors.
     <details><summary>Picture</summary>
@@ -467,11 +472,11 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
     </details>
     <br>
 
-22. In your workspace type in **cd hangman-cli** and then **git remote rename origin upstream** that should create your own version of project. Next type in **git remote add origin http://github.com/YOU/YOUR_REPO**(do not open the link leads to nowhere just drag text and copy it) if you are confused you can follow this [link](https://stackoverflow.com/questions/18200248/cloning-a-repo-from-someone-elses-github-and-pushing-it-to-a-repo-on-my-github). I have used it myself.
+22. In your workspace type in **cd hangman-cli** and then **git remote rename origin upstream** that should create your own version of project. Next type in **git remote add origin link to your repo ** (do not open the link leads to nowhere just drag text and copy it) if you are confused you can follow this [link](https://stackoverflow.com/questions/18200248/cloning-a-repo-from-someone-elses-github-and-pushing-it-to-a-repo-on-my-github). I have used it myself.
 
 23. Check if your repo has assigned new repo address by typing in **git remote -v** origin should reach to your github upstream should reach to mine.
 
-24. If everything is alright type in **git add .**, then **git commit -m "write whatever u wnt"** and then **git push origin main --force** We use force to push the files we have cloned otherwise it will try to fetch new files from my repository.
+24. If everything is alright type in **git add .**  then **git commit -m "write whatever u wnt"** and then **git push origin main --force** We use force to push the files we have cloned otherwise it will try to fetch new files from my repository.
 
 25. Check your github repo if all the files are pushed correctly.
 
