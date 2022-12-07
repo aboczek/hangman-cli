@@ -48,7 +48,7 @@ def get_nickname():
     time.sleep(1)
     user_input = input("Put your nickname here: \n")
     nickname = user_input
-    if user_input == "":
+    if user_input == "" or user_input.isspace():
         print("Cant use empty nickname!")
         get_nickname()
     print_new_line()

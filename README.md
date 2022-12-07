@@ -412,7 +412,7 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
     </details>
     <br>
 
-## GitHub/GitPod
+## Local Deployment
 <br>
 
 14. Go to [GitHub](https://github.com/) and login if you arent, then go to [this link](https://github.com/aboczek/hangman-cli). My repository will open, press **< CODE >** and press **Local** then press Copy to clipboard button.
