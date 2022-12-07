@@ -326,7 +326,7 @@ I had to redo the checking instead of **user_input == "yes" or "no"** made it as
 
 # Bugs
 
-1. Nickname can be space, tried to figure it out but failed so far.
+1. Nickname can be space, tried to figure it out but failed so far. -- **FIXED**
 2. Numbers are taken in as input, made error pop up saying letters only allowed.
 3. Letters or numbers used again throw an error but keep getting added to list of GUESSES.
 4. If API is down, txt file will give words in defensive code but there is chance of same word coming up more than once.
