@@ -118,8 +118,9 @@ def guess_word():
             GUESS_MISTAKE += 1
 
         GUESSES.append(guess_input.lower())
+        GUESSES_LIST = set(GUESSES)
         time.sleep(1)
-        print("\nLetters used already:\n", ', '.join(GUESSES))
+        print("\nLetters used already:\n", ', '.join(GUESSES_LIST))
         if guess_input == "" or len(guess_input) != 1:
             print("\n Warning! Too many letters or input is empty!")
 
